@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "pixel-character-generator"
+version = "0.1.0"
+description = "A pixel art character generator using DALL-E"
+authors = ["eren-olympic <eren.olympic.14@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+openai = "^1.54.5"
+python-dotenv = "^1.0.1"
+pillow = "^11.0.0"
+requests = "^2.32.3"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
+flake8 = "^7.1.1"
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+generate = "src.main:main"
